@@ -1,7 +1,9 @@
 import { Link, useLocation } from 'react-router-dom'
+import logo from '../assets/logo.svg'
 
 const navLinks = [
   { path: '/', label: 'Home' },
+  { path: '/about', label: 'About' },
   { path: '/projects', label: 'Projects' },
   { path: '/blog', label: 'Blog' },
   { path: '/resume', label: 'Resume' },
@@ -11,21 +13,26 @@ export default function Header() {
   const location = useLocation()
 
   return (
-    <header className="bg-gray-900 text-white">
-      <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="text-lg font-bold tracking-tight hover:text-amber-400 transition-colors">
-          ned-ops<span className="text-amber-500">.dev</span>
+    <header className="sticky top-0 z-10" style={{ background: "linear-gradient(180deg, #BBBBBB, #FFFFFF)", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-4 flex items-center justify-between">
+        <Link to="/" className="hover:opacity-80 transition-opacity relative z-20">
+            <img
+                src={logo}
+                alt="Ned-ops"
+                style={{ height: "clamp(48px, 4vw + 24px, 72px)" }}
+            />
         </Link>
-        <nav className="flex gap-6">
+        <nav className="flex gap-2 sm:gap-6">
           {navLinks.map(link => (
             <Link
               key={link.path}
               to={link.path}
-              className={`text-sm transition-colors ${
+              className={`transition-colors ${
                 location.pathname === link.path
-                  ? 'text-amber-400 font-medium'
-                  : 'text-gray-300 hover:text-white'
-              }`}
+                    ? 'text-amber-600 font-medium'
+                    : 'text-gray-500 hover:text-gray-900'
+                }`}
+              style={{ fontSize: "clamp(10px, 0.8vw + 6px, 14px)" }}
             >
               {link.label}
             </Link>

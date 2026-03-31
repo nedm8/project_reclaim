@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+@keyframes rainbow-scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes rainbow-scroll-down {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+.animate-rainbow-scroll {
+  animation: rainbow-scroll 2s ease-in-out infinite alternate;
+}
+
+.animate-rainbow-scroll-down {
+  animation: rainbow-scroll-down 2s ease-in-out infinite alternate;
+}
