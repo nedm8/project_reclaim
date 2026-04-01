@@ -112,7 +112,7 @@ export default function Home() {
           <div className="mt-12 sm:mt-16">
           <p style={{
             fontFamily: "'DM Mono', monospace",
-            fontSize: "clamp(14px, 2vw + 6px, 20px)",
+            fontSize: "clamp(12px, 2vw + 6px, 20px)",
             letterSpacing: "0.06em",
             color: "#999",
             fontWeight: 400,
