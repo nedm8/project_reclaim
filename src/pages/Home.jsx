@@ -92,26 +92,27 @@ export default function Home() {
 
       <div className="w-full py-2 sm:py-4">
 
-        {/* ── TOP RIGHT META ── */}
-        <div
-          className="absolute top-3 sm:top-10 right-0 text-right"
-          style={{
-            fontFamily: "'DM Mono', monospace",
-            fontSize: "clamp(11px, 1vw + 4px, 11px)",
-            color: "#bbb",
-            letterSpacing: "0.04em",
-            lineHeight: 1.8,
-          }}
-        >
-          Based in the Philippines<br />
-          Available for remote work
-        </div>
+          {/* ── TOP RIGHT META ── */}
+          <div
+            className="absolute top-3 sm:top-6 right-0 text-right"
+            style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: "clamp(11px, 0.8vw + 4px, 12px)",
+              color: "#999",
+              letterSpacing: "0.04em",
+              lineHeight: "clamp(1.3em, 1vw + 1em, 1.8em)",
+              fontWeight: 400,
+            }}
+          >
+            Based in the Philippines<br />
+            Available for remote work
+          </div>
 
-        {/* ── HOOK (typewriter) ── */}
-        <div style={{ marginTop: "0", }}>
+          {/* ── HOOK (typewriter) ── */}
+          <div className="mt-12 sm:mt-16">
           <p style={{
             fontFamily: "'DM Mono', monospace",
-            fontSize: "clamp(14px, 0.8vw + 6px, 20px)",
+            fontSize: "clamp(14px, 2vw + 6px, 20px)",
             letterSpacing: "0.06em",
             color: "#999",
             fontWeight: 400,
@@ -122,7 +123,7 @@ export default function Home() {
         </div>
 
         {/* ── NAME ── */}
-        <div className="mt-1 sm:mt-8">
+        <div className="mt-4 sm:mt-8">
           <h1 style={{
             fontSize: "clamp(48px, 7vw, 64px)",
             fontWeight: 700,
@@ -135,10 +136,10 @@ export default function Home() {
         </div>
 
         {/* ── ROLE ── */}
-        <div className="mt-1 sm:mt-8">
+        <div className="mt-2">
           <p style={{
             fontFamily: "'IBM Plex Sans', sans-serif",
-            fontSize: "clamp(12px, 1.2vw + 4px, 15px)",
+            fontSize: "clamp(10px, 1.2vw + 4px, 15px)",
             color: "#777",
             letterSpacing: "clamp(0.06em, 1vw, 0.18em)",
             textTransform: "uppercase",
@@ -149,30 +150,30 @@ export default function Home() {
         </div>
 
         {/* ── DIVIDER ── */}
-        <div className="mt-1 sm:mt-6">
+        <div className="mt-1 sm:mt-2">
           <div style={{ width: "48px", height: "1px", background: "#ccc" }} />
         </div>
 
         {/* ── DESCRIPTION ── */}
-        <div className="mt-1 sm:mt-8">
+        <div className="mt-4 sm:mt-8">
           <p style={{
             fontFamily: "'IBM Plex Sans', sans-serif",
-            fontSize: "clamp(16px, 1vw + 8px, 17px)",
+            fontSize: "clamp(12px, 1vw + 8px, 17px)",
             fontWeight: 400,
             color: "#555",
             lineHeight: 1.6,
             maxWidth: "520px",
           }}>
-            I build tools and systems that make teams faster, smarter, and less
-            dependent on manual work.
+            I build tools and systems that make teams faster, smarter,
+            and more focused on the stuff that matters.
           </p>
         </div>
 
         {/* ── ANCHOR STATEMENT ── */}
-        <div className="mt-1 sm:mt-8 mb-2 sm:mb-8">
+        <div className="mt-4 sm:mt-8 mb-2 sm:mb-4">
           <p style={{
             fontFamily: "'Fraunces', serif",
-            fontSize: "clamp(24px, 4vw, 60px)",
+            fontSize: "clamp(36px, 10vw, 60px)",
             fontWeight: 700,
             color: "#0a0a0a",
             lineHeight: 1.2,
@@ -182,8 +183,8 @@ export default function Home() {
           </p>
         </div>
 
-        {/* ── CTA BUTTONS ── */}
-        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center">
+{/* ── CTA BUTTONS ── */}
+        <div className="flex flex-row gap-3 sm:gap-4 items-center mt-4 sm:mt-8 mb-4 sm:mb-8">
           <Link
             to="/about"
             className="inline-block px-3 sm:px-8 py-2 sm:py-3.5 rounded-md transition-colors duration-200"
@@ -228,40 +229,19 @@ export default function Home() {
           >
             View Projects
           </Link>
-          <Link
-            to="/resume"
-            style={{
-              fontSize: "clamp(14px, 1vw + 6px, 15px)",
-              fontWeight: 500,
-              color: "#555",
-              textDecoration: "none",
-              borderBottom: "1px solid #ccc",
-              paddingBottom: "2px",
-              transition: "color 0.2s, border-color 0.2s",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.color = "#0a0a0a";
-              e.currentTarget.style.borderColor = "#0a0a0a";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.color = "#555";
-              e.currentTarget.style.borderColor = "#ccc";
-            }}
-          >
-            View resume →
-          </Link>
         </div>
 
-        {/* ── STATUS INDICATOR ── */}
-        <div
-          className="absolute bottom-4 sm:bottom-10 right-0 flex items-center gap-2"
-          style={{
-            fontSize: "clamp(11px, 0.8vw + 4px, 12px)",
-            color: "#999",
-            fontWeight: 400,
-            letterSpacing: "0.04em",
-          }}
-        >
+      {/* ── STATUS INDICATOR ── */}
+      <div
+        className="absolute bottom-4 sm:bottom-10 right-0 flex items-center justify-end gap-2"
+        style={{
+          fontFamily: "'DM Mono', monospace",
+          fontSize: "clamp(11px, 0.8vw + 4px, 12px)",
+          color: "#999",
+          fontWeight: 400,
+          letterSpacing: "0.04em",
+        }}
+      >
           <span
             className="inline-block w-1.5 h-1.5 rounded-full animate-pulse"
             style={{ background: "#22c55e" }}

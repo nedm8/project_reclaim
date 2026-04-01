@@ -1,4 +1,11 @@
+import { useEffect } from "react";
+
 export default function About() {
+  
+  useEffect(() => {
+    document.title = "Ned-Ops — About";
+  }, []);
+  
   return (
     <div style={{ maxWidth: "900px", margin: "0 auto" }}>
       <div

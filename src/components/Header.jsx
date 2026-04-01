@@ -14,12 +14,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-10" style={{ background: "linear-gradient(180deg, #BBBBBB, #FFFFFF)", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-3 py-2 sm:py-2 flex items-center justify-between">
         <Link to="/" className="hover:opacity-80 transition-opacity relative z-20">
             <img
                 src={logo}
                 alt="Ned-ops"
-                style={{ height: "clamp(48px, 4vw + 24px, 72px)" }}
+                style={{ height: "clamp(48px, 8vw, 56px)" }}
             />
         </Link>
         <nav className="flex gap-2 sm:gap-6">
