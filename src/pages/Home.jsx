@@ -137,16 +137,20 @@ export default function Home() {
 
         {/* ── ROLE ── */}
         <div className="mt-2">
-          <p style={{
-            fontFamily: "'IBM Plex Sans', sans-serif",
-            fontSize: "clamp(10px, 1.2vw + 4px, 15px)",
-            color: "#777",
-            letterSpacing: "clamp(0.06em, 1vw, 0.18em)",
-            textTransform: "uppercase",
-            fontWeight: 400,
-          }}>
-            Operations · AI Engineering · Systems Automation
-          </p>
+        <p style={{
+          fontFamily: "'IBM Plex Sans', sans-serif",
+          fontSize: "clamp(12px, 1.2vw + 4px, 15px)",
+          color: "#777",
+          letterSpacing: "clamp(0.06em, 1vw, 0.18em)",
+          textTransform: "uppercase",
+          fontWeight: 400,
+        }}>
+          <span style={{ whiteSpace: "nowrap" }}>Operations</span>
+          {" · "}
+          <span style={{ whiteSpace: "nowrap" }}>AI Engineering</span>
+          {" · "}
+          <span style={{ whiteSpace: "nowrap" }}>Systems Automation</span>
+        </p>
         </div>
 
         {/* ── DIVIDER ── */}
