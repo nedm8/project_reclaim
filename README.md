@@ -1,21 +1,42 @@
-<<<<<<< HEAD
-# React + Vite
+# ned-ops.dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio and professional hub for Ned Mazaredo — Project Manager and Automation Engineer working across operations, AI tooling, and systems design.
 
-Currently, two official plugins are available:
+**Live site:** [ned-ops.dev](https://ned-ops.dev)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- React + Vite
+- Tailwind CSS
+- React Router
+- Cloudflare Pages (hosting)
+- Cloudflare Email Routing
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Structure
 
-## Expanding the ESLint configuration
+```
+src/
+├── components/       # Header, Footer, MainLayout, ChatWidget
+├── pages/            # Home, About, Projects, Blog, Resume
+├── App.jsx           # Routing
+└── main.jsx          # Entry point
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# project_reclaim
-ned-ops.dev website files
->>>>>>> e932e3ad8188c2ea770e882e0c6747d64f148c03
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Deployment
+
+Connected to Cloudflare Pages via GitHub — every push to `main` triggers a build and deploy automatically.
+
+## Contact
+
+**ned@ned-ops.dev**
+
+---
+
+Built by Ned Mazaredo. Let's Build Something Good.
