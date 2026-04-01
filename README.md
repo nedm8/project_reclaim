@@ -1,6 +1,6 @@
 # ned-ops.dev
 
-Personal portfolio and professional hub for Ned Mazaredo — Project Manager and Automation Engineer working across operations, AI tooling, and systems design.
+Personal portfolio, website, server, and professional hub for Ned Mazaredo — Project Manager and Automation Engineer working across operations, AI tooling, and systems design.
 
 **Live site:** [ned-ops.dev](https://ned-ops.dev)
 
