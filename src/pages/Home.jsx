@@ -170,7 +170,7 @@ export default function Home() {
         </div>
 
         {/* ── ANCHOR STATEMENT ── */}
-        <div className="mt-4 sm:mt-8 mb-2 sm:mb-4">
+        <div className="mt-4 sm:mt-8">
           <p style={{
             fontFamily: "'Fraunces', serif",
             fontSize: "clamp(36px, 10vw, 60px)",
@@ -184,29 +184,7 @@ export default function Home() {
         </div>
 
 {/* ── CTA BUTTONS ── */}
-        <div className="flex flex-row gap-3 sm:gap-4 items-center mt-4 sm:mt-8 mb-4 sm:mb-8">
-          <Link
-            to="/about"
-            className="inline-block px-3 sm:px-8 py-2 sm:py-3.5 rounded-md transition-colors duration-200"
-            style={{
-              background: "#000000",
-              color: "#ffffff",
-              fontSize: "clamp(14px, 1vw + 6px, 15px)",
-              fontWeight: 600,
-              letterSpacing: "0.02em",
-              border: "2px solid #000000",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#fafaf8";
-              e.currentTarget.style.color = "#000000";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#000000";
-              e.currentTarget.style.color = "#ffffff";
-            }}
-          >
-            About Me
-          </Link>
+        <div className="flex flex-row gap-3 sm:gap-4 items-center mt-4 sm:mt-4 mb-4 sm:mb-16">
           <Link
             to="/projects"
             className="inline-block px-3 sm:px-8 py-2 sm:py-3.5 rounded-md transition-colors duration-200"
@@ -228,6 +206,28 @@ export default function Home() {
             }}
           >
             View Projects
+          </Link>          
+          <Link
+            to="/about"
+            className="inline-block px-3 sm:px-8 py-2 sm:py-3.5 rounded-md transition-colors duration-200"
+            style={{
+              background: "#000000",
+              color: "#ffffff",
+              fontSize: "clamp(14px, 1vw + 6px, 15px)",
+              fontWeight: 600,
+              letterSpacing: "0.02em",
+              border: "2px solid #000000",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#fafaf8";
+              e.currentTarget.style.color = "#000000";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#000000";
+              e.currentTarget.style.color = "#ffffff";
+            }}
+          >
+            About Me
           </Link>
         </div>
 
