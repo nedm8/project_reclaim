@@ -12,6 +12,10 @@ function HookAnimation() {
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
+    document.title = "Ned-Ops — Let's Build Something Good";
+  }, []);
+
+  useEffect(() => {
     let timeout;
     const run = () => {
       let charIndex = 0;
@@ -54,62 +58,29 @@ function HookAnimation() {
   );
 }
 
-const RAINBOW_GRADIENT =
-  "linear-gradient(180deg, #e8593c, #ef9f27, #5dca5d, #3b8bd4, #7f77dd, #d4537e, #e8593c)";
-const RAINBOW_GRADIENT_REVERSED =
-  "linear-gradient(180deg, #d4537e, #7f77dd, #3b8bd4, #5dca5d, #ef9f27, #e8593c, #d4537e)";
-const STRIP_HEIGHT = "1000px";
-
-function RainbowStrip({ side = "right", direction = "up" }) {
-  const posClass = side === "left" ? "left-0" : "right-0";
-  const animClass = direction === "up" ? "animate-rainbow-scroll" : "animate-rainbow-scroll-down";
-  const gradient = side === "left" ? RAINBOW_GRADIENT_REVERSED : RAINBOW_GRADIENT;
-
-  return (
-    <div
-      className={`fixed top-0 ${posClass} bottom-0 w-1 sm:w-3 overflow-hidden z-0`}
-      aria-hidden="true"
-    >
-      <div className={`absolute inset-0 flex flex-col ${animClass}`}>
-        {[0, 1].map((i) => (
-          <div key={i} className="w-full flex-shrink-0" style={{ height: STRIP_HEIGHT }}>
-            <div
-              className="w-full h-full opacity-70"
-              style={{ background: gradient }}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function Home() {
   return (
     <section className="relative min-h-[calc(100vh-120px)] flex items-center sm:h-[calc(100vh-120px)]">
-      <RainbowStrip side="left" direction="down" />
-      <RainbowStrip side="right" direction="up" />
-
       <div className="w-full py-2 sm:py-4">
 
-          {/* ── TOP RIGHT META ── */}
-          <div
-            className="absolute top-3 sm:top-6 right-0 text-right"
-            style={{
-              fontFamily: "'DM Mono', monospace",
-              fontSize: "clamp(11px, 0.8vw + 4px, 12px)",
-              color: "#999",
-              letterSpacing: "0.04em",
-              lineHeight: "clamp(1.3em, 1vw + 1em, 1.8em)",
-              fontWeight: 400,
-            }}
-          >
-            Based in the Philippines<br />
-            Available for remote work
-          </div>
+        {/* ── TOP RIGHT META ── */}
+        <div
+          className="absolute top-3 sm:top-6 right-0 text-right"
+          style={{
+            fontFamily: "'DM Mono', monospace",
+            fontSize: "clamp(11px, 0.8vw + 4px, 12px)",
+            color: "#999",
+            letterSpacing: "0.04em",
+            lineHeight: "clamp(1.3em, 1vw + 1em, 1.8em)",
+            fontWeight: 400,
+          }}
+        >
+          Based in the Philippines<br />
+          Available for remote work
+        </div>
 
-          {/* ── HOOK (typewriter) ── */}
-          <div className="mt-12 sm:mt-16">
+        {/* ── HOOK (typewriter) ── */}
+        <div className="mt-12 sm:mt-16">
           <p style={{
             fontFamily: "'DM Mono', monospace",
             fontSize: "clamp(12px, 2vw + 6px, 20px)",
@@ -137,20 +108,20 @@ export default function Home() {
 
         {/* ── ROLE ── */}
         <div className="mt-2">
-        <p style={{
-          fontFamily: "'IBM Plex Sans', sans-serif",
-          fontSize: "clamp(12px, 1.2vw + 4px, 15px)",
-          color: "#777",
-          letterSpacing: "clamp(0.06em, 1vw, 0.18em)",
-          textTransform: "uppercase",
-          fontWeight: 400,
-        }}>
-          <span style={{ whiteSpace: "nowrap" }}>Operations</span>
-          {" · "}
-          <span style={{ whiteSpace: "nowrap" }}>AI Engineering</span>
-          {" · "}
-          <span style={{ whiteSpace: "nowrap" }}>Systems Automation</span>
-        </p>
+          <p style={{
+            fontFamily: "'IBM Plex Sans', sans-serif",
+            fontSize: "clamp(12px, 1.2vw + 4px, 15px)",
+            color: "#777",
+            letterSpacing: "clamp(0.06em, 1vw, 0.18em)",
+            textTransform: "uppercase",
+            fontWeight: 400,
+          }}>
+            <span style={{ whiteSpace: "nowrap" }}>Operations</span>
+            {" · "}
+            <span style={{ whiteSpace: "nowrap" }}>AI Engineering</span>
+            {" · "}
+            <span style={{ whiteSpace: "nowrap" }}>Systems Automation</span>
+          </p>
         </div>
 
         {/* ── DIVIDER ── */}
@@ -187,7 +158,7 @@ export default function Home() {
           </p>
         </div>
 
-{/* ── CTA BUTTONS ── */}
+        {/* ── CTA BUTTONS ── */}
         <div className="flex flex-row gap-3 sm:gap-4 items-center mt-4 sm:mt-4 mb-4 sm:mb-16">
           <Link
             to="/projects"
@@ -210,7 +181,7 @@ export default function Home() {
             }}
           >
             View Projects
-          </Link>          
+          </Link>
           <Link
             to="/about"
             className="inline-block px-3 sm:px-8 py-2 sm:py-3.5 rounded-md transition-colors duration-200"
@@ -235,17 +206,17 @@ export default function Home() {
           </Link>
         </div>
 
-      {/* ── STATUS INDICATOR ── */}
-      <div
-        className="absolute bottom-4 sm:bottom-10 right-0 flex items-center justify-end gap-2"
-        style={{
-          fontFamily: "'DM Mono', monospace",
-          fontSize: "clamp(11px, 0.8vw + 4px, 12px)",
-          color: "#999",
-          fontWeight: 400,
-          letterSpacing: "0.04em",
-        }}
-      >
+        {/* ── STATUS INDICATOR ── */}
+        <div
+          className="absolute bottom-4 sm:bottom-10 right-0 flex items-center justify-end gap-2"
+          style={{
+            fontFamily: "'DM Mono', monospace",
+            fontSize: "clamp(11px, 0.8vw + 4px, 12px)",
+            color: "#999",
+            fontWeight: 400,
+            letterSpacing: "0.04em",
+          }}
+        >
           <span
             className="inline-block w-1.5 h-1.5 rounded-full animate-pulse"
             style={{ background: "#22c55e" }}
