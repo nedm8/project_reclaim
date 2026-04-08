@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb";
 import PROJECTS from "../data/projectData";
 
@@ -396,16 +396,31 @@ export default function ProjectsCatalog() {
             textAlign: "center",
           }}
         >
-          <p
+        <p
+          style={{
+            fontFamily: "'DM Mono', monospace",
+            fontSize: "clamp(0.65rem, 0.6rem + 0.2vw, 0.75rem)",
+            color: "#a8a29e",
+            letterSpacing: "0.04em",
+          }}
+        >
+          You've reached the end of the catalog: try starting with{" "}
+          <Link
+            to="/projects/when-ai-and-humans-meet"
             style={{
               fontFamily: "'DM Mono', monospace",
-              fontSize: "clamp(0.65rem, 0.6rem + 0.2vw, 0.75rem)",
-              color: "#a8a29e",
+              fontSize: "clamp(0.6rem, 0.55rem + 0.2vw, 0.7rem)",
+              color: "#dc3838",
+              textDecoration: "underline dotted",
+              textUnderlineOffset: "3px",
+              textDecorationThickness: "1px",
               letterSpacing: "0.04em",
             }}
           >
-            Start with Project 01. They build on each other.
-          </p>
+            PROJECT 01
+          </Link>
+          <span className="hidden md:inline"> and see how I work</span>.
+        </p>
         </div>
       </div>
     </div>

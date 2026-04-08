@@ -19,7 +19,7 @@ function ProjectNav({ prev, next }) {
         gap: "1rem",
         paddingTop: "clamp(2rem, 4vw, 3rem)",
         borderTop: "1px solid #e7e5e4",
-        marginTop: "clamp(3rem, 6vw, 5rem)",
+        marginTop: "clamp(1.5rem, 3vw, 2.5rem)",
       }}
     >
       {/* Previous */}
@@ -86,7 +86,7 @@ function ProjectNav({ prev, next }) {
                 marginBottom: "0.25rem",
               }}
             >
-              ←
+              ← Back
             </span>
             <span
               data-title
